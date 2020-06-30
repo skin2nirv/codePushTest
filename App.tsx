@@ -25,6 +25,7 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import codePush from 'react-native-code-push';
 
 declare const global: {HermesInternal: null | {}};
 
@@ -45,10 +46,10 @@ const App = () => {
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
+              {/* <Text style={styles.sectionDescription}>
                 Edit <Text style={styles.highlight}>App.tsx</Text> to change
                 this screen and then come back to see your edits.
-              </Text>
+              </Text> */}
             </View>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>See Your Changes</Text>
@@ -114,5 +115,5 @@ const styles = StyleSheet.create({
     textAlign: 'right',
   },
 });
-
-export default App;
+let codePushOptions = {checkFrequency: codePush.CheckFrequency.ON_APP_RESUME};
+export default codePush(codePushOptions)(App);

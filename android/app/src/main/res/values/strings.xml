@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">waflTSTest</string>
+    <string moduleConfig="true" name="CodePushDeploymentKey">2500da3a-8d88-4572-9230-e18559812125</string>
+</resources>
